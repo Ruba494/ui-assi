@@ -1,0 +1,40 @@
+@font-face {
+    font-family: midan;
+    src: url(../assets/fonts/midan/Midan.eot);
+    src: url('../assets/fonts/midan/Midan.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/midan/Midan.woff2') format('woff2'),
+        url('../assets/fonts/midan/Midan.woff') format('woff'),
+        url('../assets/fonts/midan/Midan.ttf') format('truetype'),
+        url('../assets/fonts/midan/Midan.svg#Midan') format('svg');
+    font-weight: normal;
+}
+@font-face {
+    font-family: midan;
+    src: url(../assets/fonts/midan/Midan-Black.eot);
+    src: url('../assets/fonts/midan/Midan-Black.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/midan/Midan-Black.woff2') format('woff2'),
+        url('../assets/fonts/midan/Midan-Black.woff') format('woff'),
+        url('../assets/fonts/midan/Midan-Black.ttf') format('truetype'),
+        url('../assets/fonts/midan/Midan-Black.svg#Midan') format('svg');
+    font-weight: 900;
+}
+
+
+
+.vendon-logo {
+    height: 85px;
+    width: 85px;
+    background-color: #f5f8f7;
+    margin: 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.vendon-logo img{
+    max-width: 77%;
+    margin: auto;
+}
+.title{
+    font-size: 3rem;
+    font-family: midan;
+}
