@@ -20,7 +20,7 @@
 }
 
 *{
-    box-sizing: border-box;
+  
     margin: 0;
     padding: 0;
    
@@ -39,23 +39,32 @@ li, h2, h3{
     display:inline-block;
 }
 
-header{
+.header{
     height: 65px;
     width: 100%;
     background-color: #0D8A86;
     display: flex;
     justify-content:flex-end;
     align-items: center;
-    padding: 30px 10%;
+  
+    
 
 }
-.nav li , .right-header li{
-    display:inline-block;
-}
-.header .img{
-    size: 10%;
-}
-.right-header{
+
+
+.header .right-header{
+align-items: center;
     margin-left: auto;
 }
+.header .right-header ,vl{
+    border-left: 3px solid #ffff;
+    border-radius: 0.5px;
+    height: 19px;
 
+}
+
+
+.header .right-header .img  .logo{
+height: 42;
+width:159px;
+}
