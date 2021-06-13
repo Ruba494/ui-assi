@@ -19,22 +19,43 @@
     font-weight: 900;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+
+}
+body{
+    background-color: #ECECEC;
+}
 
 
-.vendon-logo {
-    height: 85px;
-    width: 85px;
-    background-color: #f5f8f7;
-    margin: 2rem;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-}
-.vendon-logo img{
-    max-width: 77%;
-    margin: auto;
-}
-.title{
-    font-size: 3rem;
+li, h2, h3{
     font-family: midan;
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+    display:inline-block;
 }
+
+header{
+    height: 65px;
+    width: 100%;
+    background-color: #0D8A86;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+.nav li , .right-header li{
+    display:inline-block;
+}
+.header .img{
+    size: 10%;
+}
+.right-header{
+    margin-left: auto;
+}
+
