@@ -1,0 +1,140 @@
+@font-face {
+  font-family: midan;
+  src: url(../assets/fonts/midan/Midan.eot);
+  src: url("../assets/fonts/midan/Midan.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/midan/Midan.woff2") format("woff2"),
+    url("../assets/fonts/midan/Midan.woff") format("woff"),
+    url("../assets/fonts/midan/Midan.ttf") format("truetype"),
+    url("../assets/fonts/midan/Midan.svg#Midan") format("svg");
+  font-weight: normal;
+}
+@font-face {
+  font-family: midan;
+  src: url(../assets/fonts/midan/Midan-Black.eot);
+  src: url("../assets/fonts/midan/Midan-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/midan/Midan-Black.woff2") format("woff2"),
+    url("../assets/fonts/midan/Midan-Black.woff") format("woff"),
+    url("../assets/fonts/midan/Midan-Black.ttf") format("truetype"),
+    url("../assets/fonts/midan/Midan-Black.svg#Midan") format("svg");
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ececec;
+}
+
+li,
+h2,
+h3 {
+  font-family: midan;
+  font-weight: normal;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+header {
+  height: 65px;
+  background-color: #0d8a86;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .right-header {
+  display: flex;
+
+  align-items: center;
+  margin-right: -170px;
+}
+
+.header .right-header .logo {
+  height: 42px;
+}
+
+.header .right-header .vl {
+  border-left: 1px solid #ffff;
+  border-radius: 0.5px;
+  height: 27px;
+  margin: auto 15px auto 15px;
+}
+
+.header .right-header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+nav {
+  margin-right: auto;
+}
+.header .left-header {
+  display: flex;
+
+  align-items: center;
+  margin-left: 170px;
+}
+
+header .left-header .account {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+header .left-header .account li {
+  margin: 3px;
+}
+
+header .left-header .img {
+  height: 20px;
+  margin: 10px;
+}
+
+header .left-header .logo2030 {
+  height: 50px;
+  margin-left: 0px;
+}
+.tabs-nav{
+  height: 85px;
+  background-color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.tabs-nav a{
+  padding-bottom: 20px;
+  padding-left: 10px;
+  width: 180px;
+  justify-content: center;
+}
+.tabs-nav li a {
+
+  display: flex;
+  
+  justify-content: center;
+  text-decoration-line:none;
+  color: #82A5A0;
+  font-size: 20px;
+  margin: auto 10px;
+  border-bottom:3px solid #82A5A0;
+
+}
+.tabs-nav li .act{
+  color: #0E8A86;
+  border-bottom:3px solid #0E8A86;
+ 
+}
+.tabs-nav li a:hover{
+  color: #0E8A86;
+  border-bottom:3px solid #0E8A86;
+ 
+}
+
+
+
+
