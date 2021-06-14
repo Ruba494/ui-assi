@@ -23,24 +23,33 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: midan;
 }
 html {
   direction: rtl;
-  background-color:#ECECEC;
+  
 }
 
 
-footer{
-  background-color: #82A5A0;
-  height: 80px;
-}
+
 body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color:#ECECEC;
   color: #353C43;
+  font-family: midan;
+
+}
+footer{
+  margin-top: auto;
+  height: 80px;
+  background-color: #82A5A0;
+
 }
 li,
 h2,
-h3 {
+h3,h4,h5 {
   font-family: midan;
   font-weight: normal;
   color: #ffffff;
@@ -93,6 +102,7 @@ font-size: 20px;
   font-weight: bold;
  
 }
+
 
 
 
@@ -175,7 +185,7 @@ header .inner-wrapper .left-header .logo2030 {
 
 .main-section{
   
-  background-color: #ECECEC;
+ 
   text-align: right;
   margin: 50px 170px;
   font-size: 32px;
@@ -188,6 +198,7 @@ header .inner-wrapper .left-header .logo2030 {
   justify-content: flex-end;
   align-items: center;
 }
+
 .main-section ul div{
 margin-right: auto;
 }
@@ -202,19 +213,64 @@ margin-right: auto;
 }
 
 .main-section .btn ,#add{
-  width: 226px;
-  height: 40px;
+  width:226px;
+  height:40px;
   background-color: #0E8A86;
   color: #ffffff;
-  display: inline;
- 
+  justify-content:flex-end;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  float: right;
 }
 
-.main-section .btn h3{
-  font-size: 29px;
+#add{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-style: normal;
+
+}
+.btn i{
+  margin-left: 19px;
+}
+.btn .btn-title{
+  text-align: right;
+  margin-right: 22px;
   
-  margin-right: 10px;
-  display: inline;
 }
 
+
+
+.sub {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+}
+.sub .subtitle{
+  color: #353C43;
+  font-size: 24px;
+  font-weight: 900;
+  margin-right: 15px;
+}
+.card{
+  background-color: #82A5A0;
+  height: 117px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 7.5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  display: inline-block;
+}
+
+
+.card .col-1 .img-card{
+  height: 85px;
+  width: 85px;
+  border-radius: 4px;
+ background-color: #353C43;
+ margin: 16px 24px 16px 10px;
+}
+
+ .card .col-1 h4{
+  font-size: 20px;
+ }
