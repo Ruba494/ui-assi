@@ -24,7 +24,9 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  direction: rtl;
+}
 body {
   background-color: #ececec;
 }
@@ -39,66 +41,85 @@ h3 {
   display: inline-block;
 }
 
-header {
+.header {
   height: 65px;
+  width: 100%;
   background-color: #0d8a86;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
+  
+  
+}
+.header .inner-wrapper{
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 170px;
+  padding-right: 170px;
+  
 }
 
-.header .right-header {
-  display: flex;
 
+.header .inner-wrapper .right-header {
+  display: flex;
   align-items: center;
-  margin-right: -170px;
+  margin-left: auto;
+
+  
 }
 
-.header .right-header .logo {
+.header .inner-wrapper .right-header .logo {
   height: 42px;
+ 
 }
 
-.header .right-header .vl {
+.header .inner-wrapper .right-header .vl {
   border-left: 1px solid #ffff;
   border-radius: 0.5px;
   height: 27px;
   margin: auto 15px auto 15px;
 }
 
-.header .right-header h2 {
+.header .inner-wrapper .right-header h2 {
   font-size: 20px;
   font-weight: bold;
-  margin-left: auto;
+ 
 }
 
-nav {
-  margin-right: auto;
-}
-.header .left-header {
+
+
+.header  .inner-wrapper .left-header {
   display: flex;
-
   align-items: center;
-  margin-left: 170px;
+  margin-right: auto;
+  
+  
 }
 
-header .left-header .account {
+header .inner-wrapper .left-header .account {
   display: flex;
   align-items: center;
   margin: 10px;
 }
-header .left-header .account li {
+header .inner-wrapper .left-header .account li {
   margin: 3px;
 }
 
-header .left-header .img {
+header .inner-wrapper .left-header .img {
   height: 20px;
   margin: 10px;
 }
 
-header .left-header .logo2030 {
+header .inner-wrapper .left-header .logo2030 {
   height: 50px;
-  margin-left: 0px;
+  margin-right: 0px;
+  
 }
+
+
+
+
+
 .tabs-nav{
   height: 85px;
   background-color: #ffff;
