@@ -27,13 +27,14 @@
 }
 html {
   direction: rtl;
+  background-color: #ececec;
 }
 
 body {
+  background-color: #ececec !important;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #ececec;
   color: #353c43;
   font-family: midan;
 }
@@ -160,6 +161,7 @@ header .inner-wrapper .left-header .logo2030 {
   text-align: right;
   margin: 50px 170px;
   font-size: 32px;
+  
 }
 .main-section ul {
   display: flex;
@@ -192,16 +194,20 @@ header .inner-wrapper .left-header .logo2030 {
 
 #add {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  font-style: normal;
+  
+  
 }
+#add 
+
 .btn i {
   margin-left: 19px;
 }
 .btn .btn-title {
   text-align: right;
   margin-right: 22px;
+  
 }
 
 .sub {
@@ -212,13 +218,13 @@ header .inner-wrapper .left-header .logo2030 {
 }
 .sub .subtitle {
   color: #353c43;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 900;
   margin-right: 15px;
 }
 
 .card {
-  background-color: #82a5a0;
+  background-color: #ffffff;
   height: 117px;
   border-radius: 4px;
   box-shadow: 0px 4px 7.5px rgba(0, 0, 0, 0.1);
@@ -226,11 +232,13 @@ header .inner-wrapper .left-header .logo2030 {
   margin-bottom: 7px;
 }
 
+
 .card .colm-1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 
 .card .colm-1 .img-card {
   height: 85px;
@@ -332,36 +340,59 @@ background-color: #0d8a86;
 
 footer {
   margin-top: auto;
-  height: 80px;
+  height: 90px;
 
-  background-color: #0d8a86;
+  background-color: #ffff;
 
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
+  
+  
+}
+.footer-wrapper{
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  
-}
-footer ul{
-  margin: 10px 150px;
-}
+margin-left: 150px;
+margin-right: 150px;
+padding-top: 10px;
 
-footer .li-img img{
-max-width: 29px;
-margin: 10px;
-}
-footer .li-h{
-  font-size: 18px;
-  color: #ffff;
-  
-  margin-left: 200px;
-  margin-right: 170px;
 
 }
-footer .li-h1{
+.footer-wrapper .div-item{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top:10px;
+  
+
+
+}
+.footer-wrapper .div-item .item1 ul , .item2 ul,.item3 ul{
+  align-items: center;
+ margin-bottom: auto;
+
+}
+
+.footer-wrapper  img{
+  max-width: 30px;
+  margin: 10px;
+}
+.footer-wrapper .li-h{
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  color: #6C7E80;
+  
+}
+.footer-wrapper .li-h1{
   font-size: 22px;
   font-weight: 900;
-  color: #fff;
-  
+  text-align: center;
+  color: #6C7E80;
 }
-  
+
+
