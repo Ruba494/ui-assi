@@ -44,6 +44,7 @@ body {
   flex-direction: column;
   color: $text-color1;
   font-family: $font-famialy;
+  display: grid;
 }
 li,
 h2,
@@ -52,7 +53,6 @@ h4,
 h5 {
   font-family: $font-famialy;
   font-weight: $font-normal;
-  color: $background-color-footer;
   text-decoration: none;
   display: inline-block;
 }
@@ -124,6 +124,7 @@ h5 {
       margin-bottom: 0px;
     }
   }
+  color: $background-color-footer;
 }
 
 header {
@@ -240,24 +241,22 @@ header .inner-wrapper .left-header .logo2030 {
 
 .main-section .btn,
 #search {
-    width: 41px;
-    height: 41px;
-    background-color: $background-color-footer;
-    box-shadow: $shadow1;
-  
+  width: 41px;
+  height: 41px;
+  background-color: $background-color-footer;
+  box-shadow: $shadow1;
 }
 
 .main-section .btn,
 #add {
-    width: 226px;
-    height: 40px;
-    background-color: $text-color3;
-    color: $background-color-footer;
-    justify-content: flex-end;
-    box-shadow: $shadow1;
-    float: right;
-  }
-
+  width: 226px;
+  height: 40px;
+  background-color: $text-color3;
+  color: $background-color-footer;
+  justify-content: flex-end;
+  box-shadow: $shadow1;
+  float: right;
+}
 
 #add {
   display: flex;
@@ -417,45 +416,71 @@ footer {
   background-color: $background-color-footer;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  
+ 
 }
-.footer-wrapper {
+
+footer .footer-wrapper {
   height: 90px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-left: 150px;
   margin-right: 150px;
   padding-top: 10px;
+  padding-left: 0px;
 }
-.footer-wrapper .div-item {
-  
+footer .footer-wrapper .div-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 10px;
+  
 }
-.footer-wrapper .div-item .item1 ul,
+footer .footer-wrapper .div-item .item1 ul,
 .item2 ul,
 .item3 ul {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: auto;
 }
-.footer-wrapper img {
+
+footer .footer-wrapper img {
   max-width: 30px;
   margin: 10px;
 }
-.footer-wrapper .li-h {
-  margin-left: 40px;
-  margin-right: 40px;
+footer .footer-wrapper .li-h {
+  margin: auto;
   text-align: center;
   color: $text-color4;
+  margin-left: 30vh;
+  margin-right: 30vh;
 }
-.footer-wrapper .li-h1 {
+footer .footer-wrapper .li-h1 {
   font-size: $font-size2;
   font-weight: $font-bold;
   text-align: center;
   color: $text-color4;
+  margin-left: 15px;
 }
 
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
 
+@media (min-width: 320px) and (max-width: 480px) {
+  /* CSS */
+  body {
+    display: grid;
+  }
+  .tabs-nav a {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+ 
+}
