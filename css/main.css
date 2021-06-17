@@ -584,7 +584,8 @@ footer .footer-wrapper .li-h1 {
   .header .inner-wrapper .right-header {
     font-display: fallback;
   }
-  .header .inner-wrapper .right-header, .header .inner-wrapper .left-header {
+  .header .inner-wrapper .right-header,
+  .header .inner-wrapper .left-header {
     max-width: 480px;
     text-align: right;
     margin: 0px;

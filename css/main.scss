@@ -440,8 +440,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
- 
 }
 
 footer .footer-wrapper {
@@ -459,8 +457,6 @@ footer .footer-wrapper .div-item {
   justify-content: flex-end;
   align-items: center;
   padding-top: 10px;
-  
-  
 }
 footer .footer-wrapper .div-item .item1 ul,
 .item2 ul,
@@ -495,198 +491,164 @@ footer .footer-wrapper .li-h1 {
   ##Screen = B/w 320px to 479px
 */
 
-@media  (max-width: 480px) {
+@media (max-width: 480px) {
   /* CSS */
-  html{
-   
-  }
-  body{
+
+  body {
     display: grid;
     max-width: 480px;
-
   }
 
-
- 
-footer{
-  max-width: 480px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
- align-content: center;
-
-}
-
-.footer-wrapper{
-  max-width: 480px;
-  display: flex;
- flex-wrap: wrap;
- width: 100%;
-  align-content: center;
-  margin: 0px 0px;
-  
-
-}
-
-
-footer .footer-wrapper .li-h {
- 
-  margin-left: 5vh;
-  margin-right: 5vh;
-}
-
-
-.header{
-  max-width: 480px;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
- align-content: center;
- align-items: center;
-
-}
-
-.header .inner-wrapper{
-  max-width: 480px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
- margin-top: 11px;
-
-
-}
-.header .inner-wrapper .right-header {
-  
-  font-display: fallback ;
-  
-}
-.header .inner-wrapper .right-header li {
-  
-}
-
-
-.header .inner-wrapper .right-header,.header .inner-wrapper .left-header {
-  max-width: 480px;
-  text-align: right;
-  margin: 0px;
-  
-}
-
-
-.tabs-nav{
-  max-width: 480px;
-  height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
- .tabs-nav ul{
-  max-width: 480px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  
- }
-
-
- .tabs-nav ul:last-child{
- align-content: center;
-
-}
-.main-section{
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-margin-left: 10px;
-margin-right: 10px;
-
-}
-.main-section .main-header {
-  margin: auto;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-
-  margin-right: 20px;
-
-}
-
-.main-section .main-header li{
-  display: inline;
-}
-.main-section .main-header .main-left{
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-  
-}
-.main-section .main-header .main-left .btn{
-margin-right: 15px;
-}
-
-.outer-card {
-  width: 98%;
-  margin: auto;
-  
-}
-.card{
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  justify-content: center;
-  align-items: center;
-}
-
-.card .colm-1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  
-}
-
-.card .colm-1 .info {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: justify;
-}
-
-.card .colm-1 .img-card {
-  height: 120px;
-  width: 120px;
-}
-
-.card .colm-1 .last-btn{
-  display:inline;
-  justify-content: flex-start;
-  align-items: center;
-  
-  i{
-  display: inline;
+  footer {
+    max-width: 480px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
   }
-}
-.card .colm-1 .last-vl{
-  visibility: hidden;
-}
-.main-section .btn-group {
-  margin-left: auto;
-  
-}
-.footer{
-  max-width: 480px;
-  
-}
-.footer .footer-wrapper{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  
-  
-margin: 0px;
-}
 
+  .footer-wrapper {
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    margin: 0px 0px;
+  }
+
+  footer .footer-wrapper .li-h {
+    margin-left: 5vh;
+    margin-right: 5vh;
+  }
+
+  .header {
+    max-width: 480px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .header .inner-wrapper {
+    max-width: 480px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 11px;
+  }
+  .header .inner-wrapper .right-header {
+    font-display: fallback;
+  }
+
+  .header .inner-wrapper .right-header,
+  .header .inner-wrapper .left-header {
+    max-width: 480px;
+    text-align: right;
+    margin: 0px;
+  }
+
+  .tabs-nav {
+    max-width: 480px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tabs-nav ul {
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tabs-nav ul:last-child {
+    align-content: center;
+  }
+  .main-section {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main-section .main-header {
+    margin: auto;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20px;
+  }
+
+  .main-section .main-header li {
+    display: inline;
+  }
+  .main-section .main-header .main-left {
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .main-section .main-header .main-left .btn {
+    margin-right: 15px;
+  }
+
+  .outer-card {
+    width: 98%;
+    margin: auto;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card .colm-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card .colm-1 .info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .card .colm-1 .img-card {
+    height: 120px;
+    width: 120px;
+  }
+
+  .card .colm-1 .last-btn {
+    display: inline;
+    justify-content: flex-start;
+    align-items: center;
+
+    i {
+      display: inline;
+    }
+  }
+  .card .colm-1 .last-vl {
+    visibility: hidden;
+  }
+  .main-section .btn-group {
+    margin-left: auto;
+  }
+  .footer {
+    max-width: 480px;
+  }
+  .footer .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    margin: 0px;
+  }
 }
