@@ -7,8 +7,11 @@
   <meta name="HandheldFriendly" content="true">
   <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/main.css">
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/main.css">
+  <script src="../Js/script.js"></script>
 
 </head>
 
@@ -92,13 +95,16 @@
                   <path
                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg></i></button></li>
-          <li><button type="button" class="btn " id="add"><i class="bi bi-plus-lg " style="color: #ffffff; "><svg
+          <li><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal" id="add" ><i class="bi bi-plus-lg " style="color: #ffffff; "><svg
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="margin-bottom: -2px;"
                   fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                   <path
                     d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
                   <span class="btn-title" style=" font-size:22px;">اضافة سلسلة المتاجر</span> </i>
-              </svg></button></li>
+              </svg>
+            </button>
+            
+          </li>
         </div>
       </ul>
       <div class="sub">
@@ -370,6 +376,73 @@
 
     </div>
   </footer>
+  
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">اضافة سلسلة المتاجر</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="needs-validation" novalidate>
+               
+              <label for="validationCustom01"></label>
+                  <div class="colm-2">
+              
+                      <div class="info">
+                        <label for="validationCustom01">علامة المتجر</h4>
+                        <input type="file" name="img" id="validationCustom01" style="margin: 10%; margin-top: 25px;">
+                      </div>
+              
+                      <div class="info company-name" >
+                        <label for="validationCustom02" class="form-label">اسم المتجر</label>
+                        <input type="text" id="validationCustom02" required>
+                        <div class="invalid-feedback">
+                          يجب الا يقل عن ٤ خانات
+                        </div>
+                      </div>
+              
+                    
+              
+                      <div class="info more-info">
+                        <label for="validationCustom03" class="form-label" >رقم السجل</label>
+                        <input type="number" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                          يجب الا يقل عن ١٠ خانات
+                        </div>
+                      </div>
+              
+                      
+                      <div class="info more-info">
+                        <label for="validationCustom04" class="form-label">عدد المتاجر</label>
+                        <input type="number" id="validationCustom04" required>
+                        
+                      </div>
+                      
+              
+                      <div class="info  more-info">
+                        <label for="validationCustom05" class="form-label">رصيد التخفيضات</label>
+                        <input type="number" id="validationCustom05" required>
+                      </div>
+                      <div class="invalid-feedback">
+                        يجب الا يتعدى ١٠٠ يوم
+                      </div>
+                    </div>
+              
+                  </div>
+            
+              </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                <button type="submit" class="btn " style="background-color: #0E8A86; color: #ffffff;" >اضافه متجر</button>
+              </div>
+            </div>
+        </div>
+        
+   
+  </div>
 </body>
 
 </html>
