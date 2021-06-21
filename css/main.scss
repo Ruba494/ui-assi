@@ -486,13 +486,38 @@ footer .footer-wrapper .li-h1 {
   margin-left: 15px;
 }
 
-.modal-body{
-  
-  text-align: right;
-
-
+.hl{
+  background-color:$background-color-heder;
+  height:1px;
+  width:100%;
+}
+.submain{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
+.submain .mainright{
+width: 20%;
+  h3{
+    color: #0d8a86;
+    font-size: $font-size1;
+  }
+  p{
+    font-size: $font-size3;
+  }
+}
+.submain .mainleft{
+  margin-right:10px;
+padding: 10px 20px;
+  background-color: $text-color2;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: $shadow2;
+  display: flex;
+
+  
+}
 
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
