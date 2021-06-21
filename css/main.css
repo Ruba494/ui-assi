@@ -515,6 +515,7 @@ footer .footer-wrapper .li-h1 {
   background-color: #0d8a86;
   height: 1px;
   width: 100%;
+  margin: 20px auto;
 }
 
 .submain {
@@ -525,7 +526,6 @@ footer .footer-wrapper .li-h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 20px;
 }
 
 .submain .mainright {
@@ -552,6 +552,10 @@ footer .footer-wrapper .li-h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.mainleft form {
+  width: 100%;
 }
 
 .radioBox-continer {
@@ -651,9 +655,13 @@ footer .footer-wrapper .li-h1 {
 }
 
 .inputlogo {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -666,7 +674,7 @@ footer .footer-wrapper .li-h1 {
 .inputlogo .sub-outer-wrapper {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: " sub-wrapper sub-wrapper  discard" " inputlogoContainer inputlogoContainer discard";
+      grid-template-areas: " sub-wrapper sub-wrapper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  .  discard" " inputlogoContainer inputlogoContainer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  .  discard";
   grid-gap: 10px;
 }
 
@@ -717,6 +725,80 @@ footer .footer-wrapper .li-h1 {
 .inputlogo .sub-outer-wrapper
 .discard img {
   width: 70%;
+}
+
+.contaiter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table1 table {
+  font-family: midan;
+  width: 80%;
+}
+
+.table1 table th, .table1 table td {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.table1 table thead {
+  background-color: #0d8a86;
+  color: #ffffff;
+}
+
+.table1 table tbody {
+  background-color: #EBF3F1;
+  color: #0d8a86;
+}
+
+.btns {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btns .close {
+  width: 155px;
+  background-color: #ffffff;
+  color: #0E8A86;
+  font-family: midan;
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+
+.btns .add {
+  width: 155px;
+  background-color: #0E8A86;
+  color: #ffffff;
+  font-family: midan;
+  font-weight: 100;
+  font-size: 1.25rem;
+  margin-right: 5px;
 }
 
 /* 
@@ -951,6 +1033,12 @@ footer .footer-wrapper .li-h1 {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0px;
+  }
+  .inputlogo .sub-outer-wrapper {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: " sub-wrapper sub-wrapper . . . . . .  .  discard" " inputlogoContainer inputlogoContainer  . . . . . .  . discard";
+    grid-gap: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */

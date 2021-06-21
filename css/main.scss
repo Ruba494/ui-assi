@@ -492,11 +492,12 @@ footer .footer-wrapper .li-h1 {
   background-color:$background-color-heder;
   height:1px;
   width:100%;
+  margin: 20px auto;
 }
 .submain{
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+ 
 }
 
 .submain .mainright{
@@ -510,6 +511,7 @@ width: 20%;
   }
 }
 .submain .mainleft{
+  
   margin-right:10px;
 padding: 10px 20px;
   background-color: $text-color2;
@@ -517,6 +519,9 @@ padding: 10px 20px;
   border-radius: 4px;
   box-shadow: $shadow2;
   display: flex;
+}
+.mainleft  form{
+width: 100%;
 }
 
 .radioBox-continer{
@@ -590,7 +595,9 @@ font-size:$font-size2;
 }
 
 .inputlogo{
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   flex-direction: row;
   align-items: center;
 
@@ -598,8 +605,8 @@ font-size:$font-size2;
 .inputlogo .sub-outer-wrapper{
   display: grid;
   grid-template-areas:
-  " sub-wrapper sub-wrapper  discard"
-  " inputlogoContainer inputlogoContainer discard";
+  " sub-wrapper sub-wrapper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  .  discard"
+  " inputlogoContainer inputlogoContainer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  .  discard";
   grid-gap: 10px;
 }
 
@@ -633,6 +640,7 @@ display: flex;
 justify-content: center;
 img{
   width: 70%;
+ 
 }
 
 background-color: $background-color-imgcard;
@@ -640,8 +648,57 @@ border-radius: 4px;
 
 }
 
+.contaiter{
+  display: flex;
+  flex-direction: column;
+}
+.table1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table1 table{
+  font-family: $font-famialy;
+  width: 80%;
+  th,td{
+    font-size: $font-size3;
+    font-weight: $font-normal;
+  }
+  thead{
+    background-color:$background-color-heder;
+    color: #ffffff;
+  }
+  tbody{
+    background-color:#EBF3F1;
+    color:$background-color-heder;
+  }
+}
 
+.btns{
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
+ .close{
+   width: 155px;
+   background-color: #ffffff;
+   color: #0E8A86;
+   font-family: $font-famialy;
+   font-weight: $font-normal;
+   font-size: $font-size2;
+
+ }
+ .add{
+  width: 155px;
+  background-color: #0E8A86;
+  color: #ffffff;
+  font-family: $font-famialy;
+  font-weight: $font-normal;
+  font-size: $font-size2;
+margin-right: 5px;
+ }
+}
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
@@ -806,5 +863,13 @@ border-radius: 4px;
     justify-content: center;
 
     margin: 0px;
+  }
+
+  .inputlogo .sub-outer-wrapper{
+    display: grid;
+    grid-template-areas:
+    " sub-wrapper sub-wrapper . . . . . .  .  discard"
+    " inputlogoContainer inputlogoContainer  . . . . . .  . discard";
+    grid-gap: 10px;
   }
 }
