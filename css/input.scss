@@ -1,0 +1,287 @@
+$background-color1: #ececec;
+$background-color-heder: #0d8a86;
+$background-color-footer: #ffff;
+$background-color-imgcard: #f5f8f7;
+
+$text-color1: #353c43;
+$text-color2: #ffffff;
+$text-color21: #82a5a0;
+$text-color3: #0e8a86;
+$text-color4: #6c7e80;
+
+$font-famialy: midan;
+$font-normal: 100;
+$font-bold: 900;
+$font-size1: 2rem;
+$font-size2: 1.25rem;
+$font-size3: 1.25rem;
+$font-size4: 1.125rem;
+$font-size5: 1rem;
+
+$white-divider: 1px solid #ffff;
+$gray-divider: 1px solid $background-color1;
+$border-bottom1: 3px solid #82a5a0;
+$border-bottom2: 3px solid #0e8a86;
+$border: 1px solid #ccced0;
+
+$shadow1: 0px 8px 15px rgba(0, 0, 0, 0.1);
+$shadow2: 0px 4px 7.5px rgba(0, 0, 0, 0.1);
+
+@font-face {
+  font-family: midan;
+  src: url(../assets/fonts/midan/Midan.eot);
+  src: url("../assets/fonts/midan/Midan.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/midan/Midan.woff2") format("woff2"),
+    url("../assets/fonts/midan/Midan.woff") format("woff"),
+    url("../assets/fonts/midan/Midan.ttf") format("truetype"),
+    url("../assets/fonts/midan/Midan.svg#Midan") format("svg");
+  font-weight: normal;
+}
+@font-face {
+  font-family: midan;
+  src: url(../assets/fonts/midan/Midan-Black.eot);
+  src: url("../assets/fonts/midan/Midan-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/midan/Midan-Black.woff2") format("woff2"),
+    url("../assets/fonts/midan/Midan-Black.woff") format("woff"),
+    url("../assets/fonts/midan/Midan-Black.ttf") format("truetype"),
+    url("../assets/fonts/midan/Midan-Black.svg#Midan") format("svg");
+  font-weight: 900;
+}
+
+.hl {
+  background-color: $background-color-heder;
+  height: 1px;
+  width: 100%;
+  margin: 20px auto;
+}
+.submain {
+  display: flex;
+  flex-direction: row;
+}
+
+.submain .mainright {
+  width: 20%;
+  h3 {
+    color: #0d8a86;
+    font-size: $font-size1;
+  }
+  p {
+    font-size: $font-size3;
+  }
+}
+.submain .mainleft {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: $text-color2;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: $shadow2;
+  display: flex;
+}
+
+.mainleft form {
+  width: 100%;
+}
+
+.radioBox-continer {
+  display: grid;
+  grid-gap: 1em;
+  margin: 0 auto;
+  max-width: 60em;
+  padding: 0;
+  @media (min-width: 42em) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.lableBox {
+  background-color: #ececec;
+  border-radius: 5px;
+  width: 200px;
+  height: 180px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    box-shadow: $shadow2;
+  }
+}
+input{
+    font-family: $font-famialy;
+    font-size: $font-size2;
+}
+.radioBox-continer .lableBox input {
+  margin: 0;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  &::after {
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    display: block;
+    height: 0.75rem;
+    position: absolute;
+    top: 50%;
+  }
+  &:checked {
+    background: red;
+    border-color: red;
+  }
+}
+
+.inputfeilds {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  label {
+    font-size: $font-size2;
+  }
+}
+.inputfeilds input {
+  width: 50%;
+  height: 36px;
+  border: $border;
+  border-radius: 4px;
+}
+.inputfeilds #onwename {
+  width: 100%;
+  height: 72px;
+}
+.inputfeilds #storeacti {
+  width: 100%;
+  height: 72px;
+}
+
+.inputlogo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+.inputlogo .sub-outer-wrapper {
+  display: grid;
+  grid-template-areas:
+    " sub-wrapper sub-wrapper . . . . . . . . . . . . . . . . . . . . . . . . . . . .  discard"
+    " inputlogoContainer inputlogoContainer . . . . . . . . . . . . . . . . . . . . . . . . . . . .   discard";
+  grid-gap: 10px;
+}
+
+.sub-wrapper {
+  p {
+    font-size: $font-size3;
+  }
+}
+
+.inputlogoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .btn {
+    width: 113px;
+    margin-top: 35px;
+  }
+  #inputimg {
+    width: 99%;
+  }
+}
+
+.inputlogo .sub-outer-wrapper .discard {
+  height: 200px;
+  width: 200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  img {
+    width: 70%;
+  }
+
+  background-color: $background-color-imgcard;
+  border-radius: 4px;
+}
+
+.contaiter {
+  display: flex;
+  flex-direction: column;
+}
+.table1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table1 table {
+  font-family: $font-famialy;
+  width: 80%;
+  th,
+  td {
+    font-size: $font-size3;
+    font-weight: $font-normal;
+  }
+  thead {
+    background-color: $background-color-heder;
+    color: #ffffff;
+  }
+  tbody {
+    background-color: #ebf3f1;
+    color: $background-color-heder;
+  }
+}
+
+.btns {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .close {
+    width: 155px;
+    background-color: #ffffff;
+    color: #0e8a86;
+    font-family: $font-famialy;
+    font-weight: $font-normal;
+    font-size: $font-size2;
+  }
+  .add {
+    width: 155px;
+    background-color: #0e8a86;
+    color: #ffffff;
+    font-family: $font-famialy;
+    font-weight: $font-normal;
+    font-size: $font-size2;
+    margin-right: 5px;
+  }
+}
+.errorMassage {
+    visibility: hidden;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: $font-size5;
+  color: #d71920;
+  padding: 5px auto;
+
+  
+  #errorRadio,
+  #errorCompNum,
+  #errorCompname,
+  #errorOwnername,
+  #errorStorename,
+  #errorStorelink,
+  #errorStoreacti,
+  #errorLogo {
+      
+    margin-bottom: auto;
+    font-size: $font-size5;
+  }
+  i {
+    margin: auto 3px;
+  }
+}
