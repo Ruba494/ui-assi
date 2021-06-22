@@ -108,29 +108,48 @@ $shadow2: 0px 4px 7.5px rgba(0, 0, 0, 0.1);
     box-shadow: $shadow2;
   }
 }
-input{
-    font-family: $font-famialy;
-    font-size: $font-size2;
-}
-.radioBox-continer .lableBox input {
-  margin: 0;
+.card{
   position: absolute;
-  left: 10px;
-  top: 10px;
-  &::after {
-    border: 2px solid #fff;
-    border-top: 0;
-    border-left: 0;
-    display: block;
-    height: 0.75rem;
-    position: absolute;
-    top: 50%;
-  }
-  &:checked {
-    background: red;
-    border-color: red;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
+
+.card-input-element{
+  visibility: hidden;
+  position:absolute;
+ margin-bottom: 100px;
+}
+.card-input-element+.card {
+  width: 200px;
+  height:180px;
+  
+  background-color: #ececec;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.card-input-element+.card:hover {
+  cursor: pointer;
+  border: 2px solid #0d8a86;
+  color: #0d8a86;
+}
+
+.card-input-element:checked+.card {
+  border: 2px solid #0d8a86;
+  color: #0d8a86;
+
+  
+}
+
+
+
+
+
 
 .inputfeilds {
   display: flex;

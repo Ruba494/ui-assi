@@ -190,30 +190,40 @@
             </div>
             <div class="radioBox-continer">
               <label class="lableBox" for="onlineStore"
-                >متجر
+                >
 
                 <input
-                  class="radio"
+                  class="radio card-input-element"
                   type="radio"
                   id="onlineStore"
                   name="storeType"
                   value="onlineStore"
                   required
                 />
+                <div class="card">
+
+                
+                <h3>متجر</h3>
                 <i class="fas fa-store-alt"></i>
+
+              </div>
               </label>
               <label class="lableBox" for="Store"
-                >متجر الكتروني
-                <i class="fas fa-shopping-bag"></i>
+                >
+               
                 <input
                   type="radio"
                   id="Store"
                   name="storeType"
                   value="Store"
-                  class="radio"
+                  class="radio card-input-element"
+                  onchange="RadioBoxCheck()"
                   required
                 />
-
+                <div class="card">
+                  <h3>متجر الكتروني</h3>
+                  <i class="fas fa-shopping-bag"></i>
+                </div>
               </label>
              
             </div>
@@ -247,7 +257,7 @@
 
             <div class="inputfeilds">
               <label for="compnum">السجل التجاري</label>
-              <input type="number" id="compnum" required />
+              <input type="number" id="compnum" onchange="CompnumCheck()" required />
 
               <div id="errorMassageCompNum" class="errorMassage">
                 <i class="fas fa-exclamation-circle fa-xs"></i>
@@ -255,7 +265,7 @@
               </div>
 
               <label for="compname">العلامه او الوكاله الرئيسيه</label>
-              <input type="text" id="compname" required />
+              <input type="text" id="compname" required oninput="isEmpty('compname','errorMassageCompname','errorCompname')" />
               <div id="errorMassageCompname" class="errorMassage">
                 <i class="fas fa-exclamation-circle fa-xs" ></i>
                           <p id="errorCompname">الرقم التجاري يجب ان يكون اكثر من ١٠ خانات</p>
@@ -263,7 +273,7 @@
               </div>
 
               <label for="onwename">العلامات او الوكالات الفرعيه</label>
-              <input type="text" id="onwename" />
+              <input type="text" id="onwename" oninput="isEmpty('onwename','errorMassageOwnername','errorOwnername')" />
               <div id="errorMassageOwnername" class="errorMassage">
                 <i class="fas fa-exclamation-circle fa-xs" ></i>
                           <p id="errorOwnername">الرقم التجاري يجب ان يكون اكثر من ١٠ خانات</p>
@@ -271,21 +281,21 @@
               </div>
 
               <label for="storename">اسم المتجر</label>
-              <input type="text" id="staorename" required />
+              <input type="text" id="staorename" required  oninput="isEmpty('staorename','errorMassageStorename','errorStorename')" />
               <div id="errorMassageStorename" class="errorMassage">
                 <i class="fas fa-exclamation-circle fa-xs" ></i>
                           <p id="errorStorename">الرقم التجاري يجب ان يكون اكثر من ١٠ خانات</p>
                          
               </div>
               <label for="storelink">رابط المتجر</label>
-              <input type="text" id="storelink" required />
+              <input type="text" id="storelink" required oninput="isEmpty('storelink','errorMassageStorelink','errorStorelink')" />
               <div id="errorMassageStorelink" class="errorMassage">
                 <i class="fas fa-exclamation-circle fa-xs" ></i>
                           <p id="errorStorelink">الرقم التجاري يجب ان يكون اكثر من ١٠ خانات</p>
                          
               </div>
               <label for="storeacti">نشاط المتجر</label>
-              <input type="text" id="storeacti" />
+              <input type="text" id="storeacti"  oninput="isEmpty('storeacti','errorMassageStoreacti','errorStoreacti')" />
               <div id="errorMassageStoreacti" class="errorMassage">
                 <i class="fas fa-exclamation-circle fa-xs" ></i>
                           <p id="errorStoreacti">الرقم التجاري يجب ان يكون اكثر من ١٠ خانات</p>

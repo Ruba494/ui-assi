@@ -1,6 +1,6 @@
 function myFunction() {
 
-  CompnumCheck();
+ 
   RadioBoxCheck();
 }
 
@@ -34,4 +34,18 @@ function RadioBoxCheck() {
   }
 }
 
+function isEmpty(inputId,inputDiv,pId) {//inpui id, input error message wrapper, input text (p)
+  let compname = document.getElementById(inputId).value; //get compnum value
+  let text = ""; //initiate empty string
+
+  if (compname.length==0) {
+    //if not correct
+    text = "يجب تعبئه هذا الصندوق";
+    document.getElementById(inputDiv).style.visibility = "unset"; //unset div visibilty
+    document.getElementById(pId).innerHTML = text; //concatate the comment
+  } else {
+    //if correct
+    document.getElementById(inputDiv).style.visibility = "hidden"; //hide div
+  }
+}
 
