@@ -77,11 +77,66 @@ function add1() {
     '<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
 }
 
-/*
+/* the card code
 <tr>
   <th scope="row"> <input type="text"id="contactname"></th>
   <td><input type="number" id="contactIdNum" ></td> 
   <td><input type="number" id="contactIdNum1"></td>
   <td><input type="text" id="contactOption" ></td>
 </tr>';
+*/
+
+function addCard(){
+  document.getElementById("cardtemp").insertAdjacentHTML("afterend",'<div class="card card-1"> <div class="colm-1"> <div class="img-card"> <img class="company-logo" data-src="https://www.jarir.com/skin/frontend/jarir/default/images/svg/logo.svg" alt="logo" src="https://www.jarir.com/skin/frontend/jarir/default/images/svg/logo.svg" style="margin: 10%;"> </div> <div class="info company-name"> <h4 style="color:#0E8A86;">متاجر مكتبة جرير</h4> <h5>شركه جرير المحدوده</h5> </div> <div class="vl1 last-vl"></div> <div class="info more-info"> <h4 style="color:#353C43;">رقم السجل</h4> <h5>10345876732</h5> </div> <div class="vl1"></div> <div class="info more-info"> <h4>عدد المتاجر</h4> <h5>5 متاجر</h5> </div> <div class="vl1"></div> <div class="info more-info"> <h4>رصيد التخفيضات</h4> <h5>30 يوم</h5> </div> <div class="vl1 last-vl"></div> <div class="info more-info last-btn" onclick="location.href="#"" style="cursor: pointer;"> <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /> </svg></i> </div> </div> </div>')
+}
+/* the card code
+<div class="card card-1" >
+
+
+        <div class="colm-1">
+
+          <div class="img-card">
+            <img class="company-logo" data-src="https://www.jarir.com/skin/frontend/jarir/default/images/svg/logo.svg"
+              alt="logo" src="https://www.jarir.com/skin/frontend/jarir/default/images/svg/logo.svg"
+              style="margin: 10%;">
+          </div>
+
+          <div class="info company-name">
+            <h4 style="color:#0E8A86;">متاجر مكتبة جرير</h4>
+            <h5>شركه جرير المحدوده</h5>
+          </div>
+
+          <div class="vl1 last-vl"></div>
+
+          <div class="info more-info">
+            <h4 style="color:#353C43;">رقم السجل</h4>
+            <h5>10345876732</h5>
+          </div>
+
+          <div class="vl1"></div>
+          <div class="info more-info">
+            <h4>عدد المتاجر</h4>
+            <h5>5 متاجر</h5>
+          </div>
+          <div class="vl1"></div>
+
+          <div class="info  more-info">
+            <h4>رصيد التخفيضات</h4>
+            <h5>30 يوم</h5>
+          </div>
+
+          <div class="vl1 last-vl"></div>
+          <div class="info more-info last-btn" onclick="location.href='#'" style="cursor: pointer;">
+            <h3>استعراض المتجر</h3>
+            <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+              </svg></i>
+
+          </div>
+
+        </div>
+
+      </div>
 */
