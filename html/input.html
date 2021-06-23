@@ -344,15 +344,16 @@
                       placeholder="w"
                       class="form-control"
                       required
+                      onchange="loadFile(event)"
                     />
                    
                   </div>
-                  <button class="btn" type="submit">رفع</button>
+                  <button class="btn"   >رفع</button>
                   
                 </div>
                 
                 <div class="discard" style="grid-area: discard">
-                  <img src="..\assets\Logo.svg" alt="logo" />
+                  <img src="#" alt="logo" id="output"/>
                 </div>
               </div>
               
@@ -369,10 +370,11 @@
       <div class="hl"></div>
       <div class="submain">
         <div class="mainright">
-          <h3>بيانات المتجر</h3>
+          <h3>جهات الاتصال</h3>
           <p>
-            ادخل معلومات المتجر الأساسية و التي ستنطبيق على سلسلة المتاجرالتابعة
-            تلقائيا
+            أضف بيانات الأشخاص المسؤولين عن 
+           المتجر ليسهل التواصل معهم 
+           عند الحاجة
           </p>
         </div>
         <div class="mainleft contaiter">
@@ -396,24 +398,80 @@
               </svg>
             </i>
 
-            <h3 class="subtitle">معلومات المتجر</h3>
+            <h3 class="subtitle">جهات الاتصال</h3>
           </div>
           <div class="table1">
-            <table class="table">
+            <table class="table" id="table" style="width:95%">
               <thead>
                 <tr>
-                  <th scope="col">الاسم</th>
+                  <th scope="col" >الاسم</th>
                   <th scope="col">رقم الهويه</th>
                   <th scope="col">رقم الهويه</th>
                   <th scope="col">خيارات</th>
                 </tr>
               </thead>
               <tbody>
+                
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <th scope="row"><button class=" tableButton" onclick="add()"><i class="fas fa-plus-circle"></i>اضف جهه اتصال جديده</button></th>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+     
+      <div class="hl"></div>
+      <div class="submain">
+        <div class="mainright">
+          <h3>سلسلة المتاجر</h3>
+          <p>أضف المتاجر التابعة للسجل التجاري 
+            الرئيسي و التي تختلف في العنوان
+          </p>
+        </div>
+        <div class="mainleft contaiter">
+          <div class="sub">
+            <i
+              class="bi bi-arrow-left"
+              style="color: #0e8a86; align-items: center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                />
+              </svg>
+            </i>
+
+            <h3 class="subtitle">سلسلة المتاجر</h3>
+          </div>
+          <div class="table1">
+            <table class="table" id="table1" style="width:95%">
+              <thead>
+                <tr>
+                  <th scope="col" >الاسم</th>
+                  <th scope="col">المدينه</th>
+                  <th scope="col">الحي</th>
+                  <th scope="col">خيارات</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                  <th scope="row"><button class=" tableButton" onclick="add1()"><i class="fas fa-plus-circle"></i>اضف متجر جديد</button></th>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
                 </tr>
               </tbody>
             </table>
@@ -431,7 +489,9 @@
         </a>
       </div>
     </div>
+    </div>
 
+    
     <footer class="footer">
       <div class="footer-wrapper">
         <div class="div-item div-item1" style="grid-area: div-item1">

@@ -1,3 +1,4 @@
+
 $background-color1: #ececec;
 $background-color-heder: #0d8a86;
 $background-color-footer: #ffff;
@@ -50,7 +51,7 @@ $shadow2: 0px 4px 7.5px rgba(0, 0, 0, 0.1);
 }
 
 .hl {
-  background-color: $background-color-heder;
+  background-color: #ECECEC;
   height: 1px;
   width: 100%;
   margin: 20px auto;
@@ -302,5 +303,32 @@ $shadow2: 0px 4px 7.5px rgba(0, 0, 0, 0.1);
   }
   i {
     margin: auto 3px;
+  }
+}
+
+.table {
+  td input ,th input{
+background-color: transparent;
+border-color: transparent;
+  }
+  
+}
+
+.tableButton{
+  color: #0d8a86;
+  background-color: transparent;
+  border: none;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-size: $font-size4;
+  margin: auto ;
+  i{
+    margin: auto 3px;
+  }
+  &:hover{
+    cursor: pointer;
+    
   }
 }
