@@ -66,12 +66,55 @@ function addRow() {
     cell1.appendChild(inputItem);
   }
   table.appendChild(tr);
+  
 }
 
-function add() {
-  document.getElementById("table").insertRow(1).innerHTML =
-    '<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
+var infos=[];
+
+
+function addrow() {
+  document.getElementById("table").insertRow(1).innerHTML = 
+  '<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
+ 
 }
+
+var row=1;
+function addinput(){
+  let contactname=document.getElementById("contactname").value;
+  let contactIdNum=document.getElementById("contactIdNum").value;
+  let contactIdNum1=document.getElementById("contactIdNum1").value;
+  let contactOption=document.getElementById("contactOption").value;
+
+  if(!(contactname||contactIdNum||contactIdNum1||contactOption)){
+    alert("fill input");
+    return;
+  }
+  
+  let table =document.getElementById("table");
+  let newrow=table.insertRow(row);
+  let cell1=newrow.insertCell(0);
+  let cell2=newrow.insertCell(1);
+  let cell3=newrow.insertCell(2);
+  let cell4=newrow.insertCell(3);
+
+cell1.innerHTML=contactname;
+cell2.innerHTML=contactIdNum;
+cell3.innerHTML=contactIdNum1;
+cell4.innerHTML=contactOption;
+row++;
+
+document.getElementById("contactname").value="";
+  document.getElementById("contactIdNum").value="";
+document.getElementById("contactIdNum1").value="";
+  document.getElementById("contactOption").value="";
+
+
+}
+
+ // document.getElementById("table").insertRow(1).innerHTML = 
+ //'<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
+
+
 function add1() {
   document.getElementById("table1").insertRow(1).innerHTML =
     '<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
@@ -80,9 +123,9 @@ function add1() {
 /* the card code
 <tr>
   <th scope="row"> <input type="text"id="contactname"></th>
-  <td><input type="number" id="contactIdNum" ></td> 
+  <td><input type="number" id="contactIdNum"></td> 
   <td><input type="number" id="contactIdNum1"></td>
-  <td><input type="text" id="contactOption" ></td>
+  <td><input type="text" id="contactOption"></td>
 </tr>';
 */
 
