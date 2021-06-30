@@ -237,12 +237,9 @@ function addCard(){
 
       </div>
 */
-
-let Store= JSON.parse(localStorage.getItem('Store'));
-let AllStores=[];
-AllStores.push(Store);
-
+let AllStores = JSON.parse(localStorage.getItem('AllStores'))||[];
 function myFunction() {
+
   let RadioBox = document.querySelector('input[name="storeType"]:checked').value;
   let compnum=document.getElementById("compnum").value;
   let compname=document.getElementById("compname").value;
@@ -265,8 +262,10 @@ function myFunction() {
     "contacts":contacts,
     "stores":stores
 };
+
 AllStores.push(Store);
-localStorage.setItem("Store", JSON.stringify(Store));
+
+localStorage.setItem("AllStores", JSON.stringify(AllStores));
 
 
 }
