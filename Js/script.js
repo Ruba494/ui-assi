@@ -1,6 +1,5 @@
-function myFunction() {
-  RadioBoxCheck();
-}
+
+
 
 function CompnumCheck() {
   let compname = document.getElementById("compnum").value; //get compnum value
@@ -159,10 +158,9 @@ function addstore(){
     "city": city,
     "distric":distric,
     "storeOption":storeOption
-
 };
 localStorage.setItem("entry", JSON.stringify(entry));
-contacts.push(entry);
+stores.push(entry);
 
 
   let table =document.getElementById("table1");
@@ -239,3 +237,36 @@ function addCard(){
 
       </div>
 */
+
+let Store= JSON.parse(localStorage.getItem('Store'));
+let AllStores=[];
+AllStores.push(Store);
+
+function myFunction() {
+  let RadioBox = document.querySelector('input[name="storeType"]:checked').value;
+  let compnum=document.getElementById("compnum").value;
+  let compname=document.getElementById("compname").value;
+  let onwename=document.getElementById("onwename").value;
+  let staorename=document.getElementById("staorename").value;
+  let storelink=document.getElementById("storelink").value;
+  let storeacti=document.getElementById("storeacti").value;
+  let image = document.getElementById("output").src;
+  
+
+  let Store = {
+    "RadioBox":RadioBox,
+    "compnum": compnum,
+    "compname": compname,
+    "onwename":onwename,
+    "staorename":staorename,
+    "storelink":storelink,
+    "storeacti":storeacti,
+    "image":image,
+    "contacts":contacts,
+    "stores":stores
+};
+AllStores.push(Store);
+localStorage.setItem("Store", JSON.stringify(Store));
+
+
+}
