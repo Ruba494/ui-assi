@@ -225,11 +225,11 @@
 
 .inputlogoContainer .btn {
   width: 113px;
-  margin-top: 35px;
 }
 
 .inputlogoContainer #inputimg {
   width: 99%;
+  background-color: #0d8a86;
 }
 
 .inputlogo .sub-outer-wrapper .discard {

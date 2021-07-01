@@ -341,19 +341,20 @@
                     <input
                       type="file"
                       id="inputimg"
-                      placeholder="w"
-                      class="form-control"
+                      class="form-control btn"
                       required
                       onchange="loadFile(event)"
+                      accept="image/*"
+                      
                     />
                    
                   </div>
-                  <button class="btn"   >رفع</button>
+                  <button class="btn" onclick="loadFile(event)" style="display: none;" >رفع</button>
                   
                 </div>
                 
                 <div class="discard" style="grid-area: discard">
-                  <img src="#" alt="logo" id="output"/>
+                  <img src="" alt="logo" id="output" value=""/>
                 </div>
               </div>
               
@@ -498,7 +499,7 @@
           <button type="button" class="btn close">اغلاق</button>
         </a>
         <a href="#">
-          <button type="submit" class="btn add" onclick="myFunction()">
+          <button  id="addstore" type="submit" class="btn add" onclick="myFunction()" >
             اضافه متجر
           </button>
         </a>
