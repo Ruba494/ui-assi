@@ -262,7 +262,7 @@ function addCard1() {
     <div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>${element.compnum}</h5> 
     </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.stores.length}</h5></div>
     <div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4>
-    <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"  id="moreInfo"  onclick="show();"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" type="button"> 
+    <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"  id="moreInfo"  onclick="edit(${index});"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" type="button"> 
     <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" 
     width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 
@@ -273,10 +273,33 @@ function addCard1() {
 addCard1();
 
 
-function edit(){
-  //window.location="input.html"
-  window.open("input.html","_self");
+function edit(index){
+  
+  
+  let element =JSON.parse(localStorage.getItem('AllStores'));
 
+ let RadioBox=element[index].RadioBox; 
+ let compnum=element[index].compnum; 
+ let compname=element[index].compname; 
+ let onwename=element[index].onwename; 
+ let staorename=element[index].staorename; 
+ let storelink=element[index].storelink; 
+ let storeacti=element[index].storeacti; 
+ let image=element[index].image; 
+
+// if(RadioBox==="Store"){
+//   document.getElementById("Store").checked = true;
+// }else{
+//   document.getElementById("onlineStore").checked = true;
+// }
+
+ document.getElementById("compnum").placeholder=compnum;
+ document.getElementById("compname").placeholder=compname;
+document.getElementById("onwename").placeholder=onwename;
+document.getElementById("staorename").placeholder=staorename;
+document.getElementById("storelink").placeholder=storelink;
+ document.getElementById("storeacti").placeholder=storeacti;
+ 
 
 }
 
