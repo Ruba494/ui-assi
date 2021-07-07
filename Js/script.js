@@ -57,9 +57,22 @@ function isEmpty(inputId, inputDiv, pId) {
 
 //to load and display the logo
 var loadFile = function (event) {
-  var image = document.getElementById("output"); //get the img
+  let image =  document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
+
+reader.addEventListener("load", function () {
+    // convert image file to base64 string and save to localStorage
+    localStorage.setItem("image", reader.result);
+}, false);
+
+if (image) {
+    reader.readAsDataURL(image);
+}
+
+  image = document.getElementById("output"); //get the img
   image.src = URL.createObjectURL(event.target.files[0]);//change the src to the inputed file
 };
+
 
 //not used
 function addRow() {
@@ -77,10 +90,6 @@ function addRow() {
   table.appendChild(tr);
 }
 
-function addrow() {
-  document.getElementById("table").insertRow(1).innerHTML =
-    '<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
-}
 
 
 var contacts = []; //globla contacts array
@@ -138,20 +147,6 @@ function addcontact() {
 // document.getElementById("table").insertRow(1).innerHTML =
 //'<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
 
-//not used
-function add1() {
-  document.getElementById("table1").insertRow(1).innerHTML =
-    '<tr><th scope="row"><input type="text"id="contactname" ></th> <td><input type="number" id="contactIdNum" ></td> <td><input type="number" id="contactIdNum1"></td> <td><input type="text" id="contactOption" ></td></tr>';
-/* the card code
-<tr>
-  <th scope="row"> <input type="text"id="contactname"></th>
-  <td><input type="number" id="contactIdNum"></td> 
-  <td><input type="number" id="contactIdNum1"></td>
-  <td><input type="text" id="contactOption"></td>
-</tr>';
-*/
-
-}
 
 
 var stores = [];//globla stores array
@@ -203,66 +198,7 @@ function addstore() {
   document.getElementById("distric").value = "";
   document.getElementById("storeOption").value = "";
 }
-//not used
-function addCard() {
-  document
-    .getElementById("cardtemp")
-    .insertAdjacentHTML(
-      "afterend",
-      '<div class="card card-1"> <div class="colm-1"> <div class="img-card"> <img class="company-logo" data-src="https://www.jarir.com/skin/frontend/jarir/default/images/svg/logo.svg" alt="logo" src="https://www.jarir.com/skin/frontend/jarir/default/images/svg/logo.svg" style="margin: 10%;"> </div> <div class="info company-name"> <h4 style="color:#0E8A86;">متاجر مكتبة جرير</h4> <h5>شركه جرير المحدوده</h5> </div> <div class="vl1 last-vl"></div> <div class="info more-info"> <h4 style="color:#353C43;">رقم السجل</h4> <h5>10345876732</h5> </div> <div class="vl1"></div> <div class="info more-info"> <h4>عدد المتاجر</h4> <h5>5 متاجر</h5> </div> <div class="vl1"></div> <div class="info more-info"> <h4>رصيد التخفيضات</h4> <h5>30 يوم</h5> </div> <div class="vl1 last-vl"></div> <div class="info more-info last-btn" onclick="location.href="#"" style="cursor: pointer;"> <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /> </svg></i> </div> </div> </div>'
-    );
-    /* the card code
-<div class="card card-1" >
 
-
-        <div class="colm-1">
-
-          <div class="img-card">
-            <img class="company-logo" data-src="\"+link+\"
-              alt="logo" src=\"+link+\"
-              style="margin: 10%;">
-          </div>
-
-          <div class="info company-name">
-            <h4 style="color:#0E8A86;">+name+</h4>
-            <h5>+compname+</h5>
-          </div>
-
-          <div class="vl1 last-vl"></div>
-
-          <div class="info more-info">
-            <h4 style="color:#353C43;">رقم السجل</h4>
-            <h5>+compnum+</h5>
-          </div>
-
-          <div class="vl1"></div>
-          <div class="info more-info">
-            <h4>عدد المتاجر</h4>
-            <h5>5 +stores length+</h5>
-          </div>
-          <div class="vl1"></div>
-
-          <div class="info  more-info">
-            <h4>رصيد التخفيضات</h4>
-            <h5>30 يوم</h5>
-          </div>
-
-          <div class="vl1 last-vl"></div>
-          <div class="info more-info last-btn" onclick="location.href='#'" style="cursor: pointer;">
-            <h3>استعراض المتجر</h3>
-            <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-              </svg></i>
-
-          </div>
-
-        </div>
-
-      </div>
-*/
-}
 
 
 let AllStores = JSON.parse(localStorage.getItem("AllStores")) || []; //glouble array for the previously stored objects in the local storage 
@@ -279,7 +215,7 @@ function myFunction() {//is used in fourm's submit  button
   let staorename = document.getElementById("staorename").value;
   let storelink = document.getElementById("storelink").value;
   let storeacti = document.getElementById("storeacti").value;
-  let image = document.getElementById("output").src;
+  let image = localStorage.getItem('image');
 
   //create Store oblect with all of the inputs
   let Store = {
@@ -301,38 +237,97 @@ function myFunction() {//is used in fourm's submit  button
   localStorage.setItem("AllStores", JSON.stringify(AllStores)); //set it to the local storage
 
   //el.addEventListener("click", addCard1);//when clicked check the addCard1() func          ** try another way to do it
-  e1.addEventListener("click",function(){{ isEmpty('storelink','errorMassageStorelink','errorStorelink')});
-  //isEmpty('staorename','errorMassageStorename','errorStorename')
-  //isEmpty('storeacti','errorMassageStoreacti','errorStoreacti')
-  //"isEmpty('onwename','errorMassageOwnername','errorOwnername')
-  //"isEmpty('compname','errorMassageCompname','errorCompname')"
-  //"isEmpty('compnum','errorMassageCompNum','errorCompNum')"
-  e1.addEventListener("click",function(){isEmpty('staorename','errorMassageStorename','errorStorename')});
-  e1.addEventListener("click",function(){isEmpty('storeacti','errorMassageStoreacti','errorStoreacti')});
-  e1.addEventListener("click",function(){isEmpty('onwename','errorMassageOwnername','errorOwnername')});
-  e1.addEventListener("click",function(){isEmpty('compname','errorMassageCompname','errorCompname')});
-  e1.addEventListener("click",function(){isEmpty('compnum','errorMassageCompNum','errorCompNum')});
+  addCard1();
+
 }
 
-//do it again
+
+
+//do it again　ドゥリラゲン
 function addCard1() {
   let mystore = AllStores;
+  //let cardlist=document.getElementById("cardtemp");
+  
   for (let index = 0; index < mystore.length; index++) {
+    let cardlist=document.getElementById("cardtemp");
     let element = mystore[index];
+    //console.log(cardlist);
     //document.getElementById("cardtemp").insertAdjacentHTML('<div class="card card-1"> <div class="colm-1"><div class="img-card"> <img class="company-logo" data-src="'+element.image+'alt="logo" src='+element.image+' style="margin: 10%;"> </div><div class="info company-name"> <h4 style="color:#0E8A86;">'+element.compname+'</h4> <h5>'+element.onwename+'</h5> </div><div class="vl1 last-vl"></div><div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>'+element.compnum+'</h5> </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>'+element.stores.length+'</h5></div><div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4><h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn" onclick="location.href="#" style="cursor: pointer;"> <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div></div></div>');
-    $(`<div class="card card-1"> <div class="colm-1">
-   <div class="img-card"> <img class="company-logo" 
-   data-src="${element.image} alt="logo" src=${element.image} 
-   style="margin: 10%;"> </div><div class="info company-name"> 
-   <h4 style="color:#0E8A86;">${element.compname}</h4> 
-   <h5>${element.onwename}</h5> </div><div class="vl1 last-vl"></div>
-   <div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>${element.compnum}</h5> 
-   </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.stores.length}</h5></div>
-   <div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4>
-   <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"
-    onclick="location.href="#" style="cursor: pointer;">
-     <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left">
-     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div>
-     </div></div>`).appendTo("cardtemp");
+    cardlist.innerHTML +=`<div class="card card-1"> <div class="colm-1">
+    <div class="img-card"> <img class="company-logo" 
+    data-src="${element.image} alt="logo" src=${element.image} 
+    style="max-width:85px;"> </div><div class="info company-name"> 
+    <h4 style="color:#0E8A86;">${element.compname}</h4> 
+    <h5>${element.onwename}</h5> </div><div class="vl1 last-vl"></div>
+    <div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>${element.compnum}</h5> 
+    </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.stores.length}</h5></div>
+    <div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4>
+    <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"  id="moreInfo"  onclick="edit(${index});"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" type="button"> 
+    <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" 
+    width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 
+     0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div></div></div>`;
   }
+  
 }
+addCard1();
+
+
+function edit(index){
+  
+  
+  let element =JSON.parse(localStorage.getItem('AllStores'));
+  let container=document.getElementById("companyInfos");
+  container.innerHTML +=`  <div class="infromation">
+
+  <div class="cell1">
+    <h4>رقم السجل</h4>
+    <h5 class="compnum">${element[index].compnum}</h5>
+  </div>
+
+  <div class="cell1">
+    <h4>اسم السجل :</h4>
+    <h5 class="compname">${element[index].compname}</h5>
+  </div>
+
+  <div class="cell1">
+    <h4>اسم المتجر</h4>
+    <h5 class="compname">${element[index].onwename}</h5>
+  </div>
+
+  <div class="cell1">
+    <h4>نشاط المتجر</h4>
+    <h5 class="storeacti">${element[index].storeacti}</h5>
+  </div>
+
+</div>
+<div class="discard">
+  <img src="${element[index].image}" alt="logo" id="output" value="" />
+</div>
+
+</div>`
+
+// if(RadioBox==="Store"){
+//   document.getElementById("Store").checked = true;
+// }else{
+//   document.getElementById("onlineStore").checked = true;
+// }
+
+ 
+
+}
+
+
+
+
+
+//with modal
+function show(){
+  $('#exampleModalCenter').on('shown.bs.modal', function () {
+    // $('#myInput').trigger('focus')
+    $('#exampleModalCenter').modal('focus')
+  })
+
+}
+
+
