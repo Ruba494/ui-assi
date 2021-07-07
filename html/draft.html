@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cairo"
+    />
+    <style>
+      body {
+        background-color: #ececec;
+        direction: rtl;
+        font-family: "Cairo";
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .bullet-gray {
+        height: 9px;
+        width: 8.95px;
+        background-color: gray;
+        border-radius: 50%;
+        margin: auto 2px;
+      }
+
+      .contaner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+        width: 100%;
+        margin: auto 10px;
+      }
+
+      .card-1,
+      .card-2,
+      .card-3 {
+        background-color: #fff;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 496px;
+        height: 216px;
+        margin: auto 10px;
+        position: relative;
+      }
+
+      .card-1 p {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        color: #757575;
+      }
+
+      .innercontaier {
+        padding: 5px 5%;
+      }
+
+      .dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .dropdown .dropdown-btn {
+        width: 446px;
+        height: 48px;
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: hidden;
+
+        border: 2px solid #ebe9ed;
+        border-radius: 5px;
+      }
+
+      .dropdown-btn i {
+        color: gray;
+        width: 20px;
+        margin-right: auto;
+        margin-left: 2px;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 446px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: right;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown-content a:active {
+        background-color: gray;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        margin-top: 250px;
+      }
+
+      .buttonContaier {
+        display: flex;
+        justify-content: flex-end;
+
+        margin-right: auto;
+      }
+
+      .submit-btn {
+        width: 185px;
+        height: 32px;
+        margin-top: 30px;
+        background-color: #0197a6;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+      }
+
+      .card-2 p {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        color: #757575;
+      }
+
+      .innercont {
+        padding: 5px 5%;
+        font-size: 0.58rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .innercont h3 {
+        font-weight: bolder;
+      }
+
+      .part2 {
+        margin-right: auto;
+      }
+
+      .part2 i {
+        margin: auto 5px;
+        color: #82c91f;
+      }
+
+      .innercont2 {
+        padding: 2px 5%;
+      }
+
+      .innercont2 a {
+        text-decoration: none;
+        color: #0197a6;
+      }
+
+      .contaner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+        width: 100%;
+        margin: 100px 10px;
+      }
+
+      .inputContainer {
+        padding: 2px 5%;
+        position: relative;
+        padding: 20 0 0 0;
+      }
+
+      .card-3 h3 {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        color: #0197a6;
+      }
+
+      .inputContainer input {
+        width: 446px;
+        height: 32px;
+        outline: none;
+        border: 2px solid #ebe9ed;
+        border-radius: 5px;
+      }
+
+      .inputContainer #icon {
+        visibility: hidden;
+        position: absolute;
+        top: 44px;
+        left: 30px;
+        color: #1892a0;
+      }
+      .inputContainer .valid-tooltip {
+        visibility: hidden;
+        padding: 4px 4px;
+        width: 446px;
+
+        border-radius: 5px;
+        position: absolute;
+        background-color: #98a9bb;
+        font-size: 1rem;
+      }
+      .valid-tooltip {
+        padding: auto 10%;
+      }
+
+      .valid-tooltip .row1 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .row1 button {
+        width: 20px;
+        height: 20px;
+        margin-right: auto;
+        border-radius: 5px;
+        border: none;
+        margin-left: 10px;
+      }
+
+      .row1 button #close {
+        color: #0197a6;
+        margin: auto;
+      }
+
+      .valid-tooltip h4 {
+        margin: 1px;
+        color: #fff;
+        margin-right: 20px;
+      }
+      .valid-tooltip p {
+        margin: 1px auto;
+        font-size: 0.9rem;
+        color: #fff;
+        margin-right: 20px;
+        margin-bottom: 5px;
+      }
+      .arrow-up {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+
+        border-bottom: 10px solid #98a9bb;
+        left: 10px;
+        bottom: 70px;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="bullet-gray"></div>
+      <p>text...</p>
+    </div>
+    <div class="contaner1">
+      <div class="card-1">
+        <p>ملاحظة 1</p>
+        <div class="innercontaier">
+          <div class="dropdown">
+            <button class="dropdown-btn">
+              خطأ باسم الجهة المصدره للشهاده <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">الخيار ١</a>
+              <a href="#">الخيار ٢</a>
+              <a href="#">الخيار ٣</a>
+              <a href="#">الخيار ٣</a>
+            </div>
+          </div>
+          <div class="buttonContaier">
+            <button class="submit-btn">تم</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-2">
+        <p>ملاحظة 2</p>
+        <div class="innercont">
+          <div class="datesec">
+            <h2>تاريخ اصدار الشهادة</h2>
+          </div>
+          <div class="part2">
+            <h3>تمت المراجعة<i class="far fa-check-circle"></i></h3>
+          </div>
+        </div>
+
+        <div class="innercont2">
+          <a href="#">
+            <h5>تعديل</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contaner2">
+      <div class="card-3">
+        <h3>اضافة منشأة جديده</h3>
+
+        <div class="inputContainer">
+          <label for="address1">العنوان الاول</label>
+          <input
+            type="number"
+            id="address1"
+            required
+            onchange="Check()"
+            minlength="3"
+          />
+          <i class="fas fa-exclamation-circle" id="icon"></i>
+          <div class="valid-tooltip" id="valid-tooltip">
+            <div class="arrow-up"></div>
+            <div class="row1">
+              <h4>تنبيه</h4>
+              <button onclick="hide()">
+                <i class="fas fa-times" id="close"></i>
+              </button>
+            </div>
+
+            <p>يجب ان يتوافق العنوان مع العنوان المتواجد بالترخيص الصناعي</p>
+          </div>
+        </div>
+
+        <button class="submit-btn" type="submit" style="margin: 5px 24px">
+          تم
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function hide() {
+     
+      document.getElementById("valid-tooltip").style.visibility="hidden"; //to hide the tooltip
+        
+      }
+
+      function Check() {
+        let address = document.getElementById("address1").value; //get address
+        let input = document.getElementById("address1");
+        let validtooltip = document.getElementById("valid-tooltip"); //get error message div
+        let icon = document.getElementById("icon"); //get icon
+        let pattern = /[0-9]{10}/; //used the regex to make sure that it dosent accept other pattens
+
+        if (!pattern.test(address)) {
+          //if not correct
+          validtooltip.style.visibility = "unset"; //unset div visibilty
+          icon.style.visibility = "unset"; //unset icon visibilty
+          input.style.border = " 2px solid #1892A0";
+          input.style.borderRadius = " 5px ";
+        } else {
+          //if correct
+          validtooltip.style.visibility = "hidden"; //hide div
+          icon.style.visibility = "hidden"; //hide icom
+          input.style.border = "2px solid #EBE9ED";//set border to normal
+        }
+      }
+    </script>
+  </body>
+</html>
