@@ -198,7 +198,7 @@
 .inputlogo .sub-outer-wrapper {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: " sub-wrapper sub-wrapper . . . . . . . . . . . . . . . . . . . . . . . . . . . .  discard" " inputlogoContainer inputlogoContainer . . . . . . . . . . . . . . . . . . . . . . . . . . . .   discard";
+      grid-template-areas: " sub-wrapper sub-wrapper . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . discard" " inputlogoContainer inputlogoContainer . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . .  discard";
   grid-gap: 10px;
 }
 

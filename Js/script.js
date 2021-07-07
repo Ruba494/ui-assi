@@ -300,7 +300,18 @@ function myFunction() {//is used in fourm's submit  button
 
   localStorage.setItem("AllStores", JSON.stringify(AllStores)); //set it to the local storage
 
-  el.addEventListener("click", addCard1);//when clicked check the addCard1() func          ** try another way to do it
+  //el.addEventListener("click", addCard1);//when clicked check the addCard1() func          ** try another way to do it
+  e1.addEventListener("click",function(){{ isEmpty('storelink','errorMassageStorelink','errorStorelink')});
+  //isEmpty('staorename','errorMassageStorename','errorStorename')
+  //isEmpty('storeacti','errorMassageStoreacti','errorStoreacti')
+  //"isEmpty('onwename','errorMassageOwnername','errorOwnername')
+  //"isEmpty('compname','errorMassageCompname','errorCompname')"
+  //"isEmpty('compnum','errorMassageCompNum','errorCompNum')"
+  e1.addEventListener("click",function(){isEmpty('staorename','errorMassageStorename','errorStorename')});
+  e1.addEventListener("click",function(){isEmpty('storeacti','errorMassageStoreacti','errorStoreacti')});
+  e1.addEventListener("click",function(){isEmpty('onwename','errorMassageOwnername','errorOwnername')});
+  e1.addEventListener("click",function(){isEmpty('compname','errorMassageCompname','errorCompname')});
+  e1.addEventListener("click",function(){isEmpty('compnum','errorMassageCompNum','errorCompNum')});
 }
 
 //do it again
@@ -318,8 +329,10 @@ function addCard1() {
    <div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>${element.compnum}</h5> 
    </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.stores.length}</h5></div>
    <div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4>
-   <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn" onclick="location.href="#" style="cursor: pointer;"> <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div></div></div>`).appendTo(
-      ".cardtemp"
-    );
+   <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"
+    onclick="location.href="#" style="cursor: pointer;">
+     <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left">
+     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div>
+     </div></div>`).appendTo("cardtemp");
   }
 }
