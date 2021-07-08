@@ -37,7 +37,7 @@
       .container .infromation,
       .container .discard {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; 
         flex-wrap: nowrap;
         font-size: 0.5rem;
 
@@ -191,7 +191,9 @@
           </div>
 
           <div class="container" id="companyInfos">
-
+          
+        
+          </div>
            
         </div>
 
@@ -319,10 +321,10 @@
       </div>
       <div class="btns">
         <a href="./index.html">
-          <button type="button" class="btn close">اغلاق</button>
+          <button type="button" class="btn close" >اغلاق</button>
         </a>
         <a href="#">
-          <button id="deletestore" class="btn delete  " onclick="myFunction()">
+          <button id="deletestore" class="btn delete  " onclick="deleteStore(this)()">
             حذف متجر
           </button>
         </a>
@@ -334,6 +336,7 @@
       </div>
     </div>
     </div>
+   
     </div>
 
     <footer class="footer">
@@ -374,38 +377,36 @@
       </div>
     </footer>
 
-  
+    <script src="../Js/script.js" ></script>
   </body>
-  <script src="../Js/script.js" ></script>
+ 
   </html>
 
 
+<!-- 
+  <div class="infromation">
 
-  <!-- <div class="infromation">
-
-      <div class="cell1">
-        <h4>رقم السجل</h4>
-        <h5 class="compnum"></h5>
-      </div>
-
-      <div class="cell1">
-        <h4>اسم السجل :</h4>
-        <h5 class="compname"></h5>
-      </div>
-
-      <div class="cell1">
-        <h4>اسم المتجر</h4>
-        <h5 class="compname"></h5>
-      </div>
-
-      <div class="cell1">
-        <h4>نشاط المتجر</h4>
-        <h5 class="storeacti"></h5>
-      </div>
-
-    </div>
-    <div class="discard">
-      <img src="" alt="logo" id="output" value="" />
+    <div class="cell1">
+      <h4>رقم السجل</h4>
+      <h5 class="compnum"></h5>
     </div>
 
+    <div class="cell1">
+      <h4>اسم السجل :</h4>
+      <h5 class="compname"></h5>
+    </div>
+
+    <div class="cell1">
+      <h4>اسم المتجر</h4>
+      <h5 class="compname"></h5>
+    </div>
+
+    <div class="cell1">
+      <h4>نشاط المتجر</h4>
+      <h5 class="storeacti"></h5>
+    </div>
+
+  </div>
+  <div class="discard">
+    <img src="" alt="logo" id="output" value="" />
   </div> -->

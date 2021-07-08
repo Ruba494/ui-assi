@@ -176,6 +176,7 @@ function addstore() {
 
 
   let table = document.getElementById("table1");//get the table
+
   let newrow = table.insertRow(row1);//insert new above 
 
   //insert new cells
@@ -208,6 +209,7 @@ function myFunction() {//is used in fourm's submit  button
   el.addEventListener("click", RadioBoxCheck);//when clicked check the RadioBoxCheck() func
 
   //get all input
+  
   let RadioBox = document.querySelector('input[name="storeType"]:checked').value; 
   let compnum = document.getElementById("compnum").value;
   let compname = document.getElementById("compname").value;
@@ -231,13 +233,17 @@ function myFunction() {//is used in fourm's submit  button
     stores: stores,
   };
 
-
+ 
   AllStores.push(Store);//push it to the allstors array
-
+  
+  
   localStorage.setItem("AllStores", JSON.stringify(AllStores)); //set it to the local storage
 
   //el.addEventListener("click", addCard1);//when clicked check the addCard1() func          ** try another way to do it
-  addCard1();
+  // addCard1();
+ 
+  window.location.href = "../html/index.html";
+
 
 }
 
@@ -246,10 +252,10 @@ function myFunction() {//is used in fourm's submit  button
 //do it again　ドゥリラゲン
 function addCard1() {
   let mystore = AllStores;
-  //let cardlist=document.getElementById("cardtemp");
+  let cardlist=document.getElementById("cardtemp");
   
   for (let index = 0; index < mystore.length; index++) {
-    let cardlist=document.getElementById("cardtemp");
+    //let cardlist=document.getElementById("cardtemp");
     let element = mystore[index];
     //console.log(cardlist);
     //document.getElementById("cardtemp").insertAdjacentHTML('<div class="card card-1"> <div class="colm-1"><div class="img-card"> <img class="company-logo" data-src="'+element.image+'alt="logo" src='+element.image+' style="margin: 10%;"> </div><div class="info company-name"> <h4 style="color:#0E8A86;">'+element.compname+'</h4> <h5>'+element.onwename+'</h5> </div><div class="vl1 last-vl"></div><div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>'+element.compnum+'</h5> </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>'+element.stores.length+'</h5></div><div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4><h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn" onclick="location.href="#" style="cursor: pointer;"> <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div></div></div>');
@@ -262,72 +268,118 @@ function addCard1() {
     <div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>${element.compnum}</h5> 
     </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.stores.length}</h5></div>
     <div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4>
-    <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"  id="moreInfo"  onclick="edit(${index});"  data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;" type="button"> 
+    <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"  id="moreInfo"  onclick="edit(${index})" style="cursor: pointer;" type="button"> 
     <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" 
     width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 
      0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div></div></div>`;
+//onclick="location.href='/html/store.html'" 
+     
   }
+
   
 }
-addCard1();
+// window.onload = function () {
+//   addCard1();
+// }
+if (document.location.pathname == "/html/index.html") {
+  addCard1();
+}
+
+
 
 
 function edit(index){
-  
-  
+  window.location.href=`/html/store.html?index=${index}`;
+
+}
+
+function storeDetails(){
+   let  storeIndex=window.location.href;
+  let index=storeIndex.charAt(storeIndex.toString().length-1);
   let element =JSON.parse(localStorage.getItem('AllStores'));
   let container=document.getElementById("companyInfos");
-  container.innerHTML +=`  <div class="infromation">
-
+  container.innerHTML+=
+  `<div class="infromation">
+  
   <div class="cell1">
-    <h4>رقم السجل</h4>
+    <h4>رقم السجل :</h4>
     <h5 class="compnum">${element[index].compnum}</h5>
   </div>
-
+  
   <div class="cell1">
     <h4>اسم السجل :</h4>
     <h5 class="compname">${element[index].compname}</h5>
   </div>
-
+  
   <div class="cell1">
-    <h4>اسم المتجر</h4>
+    <h4>اسم المتجر :</h4>
     <h5 class="compname">${element[index].onwename}</h5>
   </div>
-
+  
   <div class="cell1">
-    <h4>نشاط المتجر</h4>
+    <h4>نشاط المتجر :</h4>
     <h5 class="storeacti">${element[index].storeacti}</h5>
   </div>
-
-</div>
-<div class="discard">
+  
+  </div>
+  <div class="discard">
   <img src="${element[index].image}" alt="logo" id="output" value="" />
-</div>
+  </div>`;
 
-</div>`
+  fillTable("table",element[index].contacts );
+//updateTable(element[index].contacts ,index);
+//element[index].contacts.push(JSON.parse((localStorage.getItem('entry'))));
+  //fillTable("table1",element[index].stores );
+}
 
-// if(RadioBox==="Store"){
-//   document.getElementById("Store").checked = true;
-// }else{
-//   document.getElementById("onlineStore").checked = true;
-// }
+storeDetails();
 
- 
+
+
+
+function fillTable(tableName, array){
+  //console.log(array);
+  let row=1;
+for (let index = 0; index < array.length; index++) {
+  let table = document.getElementById(tableName);;
+  
+  let newrow = table.insertRow(row1);//insert new above 
+
+  //insert new cells
+  let cell1 = newrow.insertCell(0);
+  let cell2 = newrow.insertCell(1);
+  let cell3 = newrow.insertCell(2);
+  let cell4 = newrow.insertCell(3);
+
+  //input the cells
+  if(tableName==="table"){
+  cell1.innerHTML = array[index].contactname;
+  cell2.innerHTML = array[index].contactIdNum;
+  cell3.innerHTML = array[index].contactIdNum1;
+  cell4.innerHTML = array[index].contactOption;
+  
+  }
+  if(tableName==="table1"){
+    cell1.innerHTML = array[index].Storename;
+    cell2.innerHTML = array[index].city;
+    cell3.innerHTML = array[index].city;
+    cell4.innerHTML = array[index].storeOption;
+    
+  }
+
+  row++;//incremt number of rows
+  
+}
 
 }
 
 
+function deleteStore() {
+  
+  let element =JSON.parse(localStorage.getItem('AllStores'));
 
-
-
-//with modal
-function show(){
-  $('#exampleModalCenter').on('shown.bs.modal', function () {
-    // $('#myInput').trigger('focus')
-    $('#exampleModalCenter').modal('focus')
-  })
-
+  localStorage.removeItem(this.kye);
 }
 
 
