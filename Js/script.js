@@ -352,34 +352,58 @@ for (let index = 0; index < array.length; index++) {
   let cell3 = newrow.insertCell(2);
   let cell4 = newrow.insertCell(3);
 
+ 
   //input the cells
   if(tableName==="table"){
   cell1.innerHTML = array[index].contactname;
   cell2.innerHTML = array[index].contactIdNum;
   cell3.innerHTML = array[index].contactIdNum1;
   cell4.innerHTML = array[index].contactOption;
+
+  let newContact= { //fill with the table inputs
+    contactname: array[index].contactname,
+    contactIdNum:  array[index].contactIdNum,
+    contactIdNum1: array[index].contactIdNum1,
+    contactOption: array[index].contactOption,
+  };
+
+  let  storeIndex=window.location.href;
+  let num=storeIndex.charAt(storeIndex.toString().length-1);
+  let allExistingStores=JSON.parse(localStorage.getItem('AllStores'));//array of contacts 
+
+  allExistingStores[num].contacts.push(JSON.parse(localStorage.getItem('entry')));
+
+  localStorage.setItem("AllStores", JSON.stringify(allExistingStores));
+  
+
+  
   
   }
   if(tableName==="table1"){
     cell1.innerHTML = array[index].Storename;
     cell2.innerHTML = array[index].city;
-    cell3.innerHTML = array[index].city;
+    cell3.innerHTML = array[index].distric;
     cell4.innerHTML = array[index].storeOption;
-    
+    let newStore = {
+      Storename: array[index].Storename,
+      city: array[index].city,
+      distric: array[index].city,
+      storeOption: array[index].storeOption,
+    };
+    array.push(entry);
   }
 
   row++;//incremt number of rows
   
 }
 
+
 }
 
 
 function deleteStore() {
-  
-  let element =JSON.parse(localStorage.getItem('AllStores'));
 
-  localStorage.removeItem(this.kye);
+ 
 }
 
 
