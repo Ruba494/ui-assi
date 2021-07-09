@@ -92,7 +92,7 @@ function addRow() {
 
 
 
-var contacts = []; //globla contacts array
+var contacts =  []; //globla contacts array
 var row = 1;
 function addcontact() {
 //getting the table inputs
@@ -108,16 +108,17 @@ function addcontact() {
   }
 
   //insiate entry object
-  var entry = { //fill with the table inputs
+  let entry = { //fill with the table inputs
     contactname: contactname,
     contactIdNum: contactIdNum,
     contactIdNum1: contactIdNum1,
     contactOption: contactOption,
   };
 
-  localStorage.setItem("entry", JSON.stringify(entry)); //set entry to the local storage
+  localStorage.setItem("contacts", JSON.stringify(entry)); //set entry to the local storage
   contacts.push(entry); //push the object to contacts array
 
+ 
 
   let table = document.getElementById("table");//get the table
   let newrow = table.insertRow(row);//insert new above 
@@ -149,7 +150,7 @@ function addcontact() {
 
 
 
-var stores = [];//globla stores array
+var stores =[];//globla stores array
 var row1 = 1;
 function addstore() {
 
@@ -164,14 +165,14 @@ function addstore() {
     return;
   }
 //insiate entry object
-  var entry = {
+  let entry = {
     Storename: Storename,
     city: city,
     distric: distric,
     storeOption: storeOption,
   };
 
-  localStorage.setItem("entry", JSON.stringify(entry));//set entry to the local storage
+  localStorage.setItem("stores", JSON.stringify(entry));//set entry to the local storage
   stores.push(entry);//adding it to the stores array
 
 
@@ -229,13 +230,12 @@ function myFunction() {//is used in fourm's submit  button
     storelink: storelink,
     storeacti: storeacti,
     image: image,
-    contacts: contacts,
-    stores: stores,
+    contactsOfStore: contacts,
+    storesOfStore: stores,
   };
 
  
   AllStores.push(Store);//push it to the allstors array
-  
   
   localStorage.setItem("AllStores", JSON.stringify(AllStores)); //set it to the local storage
 
@@ -244,14 +244,24 @@ function myFunction() {//is used in fourm's submit  button
  
   window.location.href = "../html/index.html";
 
+}
+
+function myFunction1() {//is used in fourm's submit  button 
+
+  let  storeIndex=window.location.href;
+  let index=storeIndex.charAt(storeIndex.toString().length-1);
+
+  AllStores[index].contactsOfStore.push(contacts);
+  AllStores[index].storesOfStore.push(stores);
+
+  localStorage.setItem('AllStores',JSON.stringify(AllStores));
+  window.location.href = "../html/index.html";
 
 }
 
-
-
 //do it again　ドゥリラゲン
 function addCard1() {
-  let mystore = AllStores;
+  let mystore =element =JSON.parse(localStorage.getItem('AllStores'));
   let cardlist=document.getElementById("cardtemp");
   
   for (let index = 0; index < mystore.length; index++) {
@@ -266,22 +276,20 @@ function addCard1() {
     <h4 style="color:#0E8A86;">${element.compname}</h4> 
     <h5>${element.onwename}</h5> </div><div class="vl1 last-vl"></div>
     <div class="info more-info"><h4 style="color:#353C43;">رقم السجل</h4><h5>${element.compnum}</h5> 
-    </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.stores.length}</h5></div>
+    </div><div class="vl1"></div><div class="info more-info"><h4>عدد المتاجر</h4> <h5>${element.storesOfStore.length}</h5></div>
     <div class="vl1"></div><div class="info  more-info"><h4>رصيد التخفيضات</h4>
     <h5>30 يوم</h5></div><div class="vl1 last-vl"></div><div class="info more-info last-btn"  id="moreInfo"  onclick="edit(${index})" style="cursor: pointer;" type="button"> 
     <h3>استعراض المتجر</h3> <i class="bi bi-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" 
     width="22" height="22" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 
      0-.708l6-6a.5.5 0 0 1 .708 0z" /></svg></i></div></div></div>`;
-//onclick="location.href='/html/store.html'" 
-     
+     console.log(element.storesOfStore.length);
   }
 
   
 }
-// window.onload = function () {
-//   addCard1();
-// }
+
+
 if (document.location.pathname == "/html/index.html") {
   addCard1();
 }
@@ -327,7 +335,8 @@ function storeDetails(){
   <img src="${element[index].image}" alt="logo" id="output" value="" />
   </div>`;
 
-  fillTable("table",element[index].contacts );
+  fillTable("table",element[index].contactsOfStore );
+  fillTable("table1",element[index].storesOfStore );
 //updateTable(element[index].contacts ,index);
 //element[index].contacts.push(JSON.parse((localStorage.getItem('entry'))));
   //fillTable("table1",element[index].stores );
@@ -360,23 +369,16 @@ for (let index = 0; index < array.length; index++) {
   cell3.innerHTML = array[index].contactIdNum1;
   cell4.innerHTML = array[index].contactOption;
 
-  let newContact= { //fill with the table inputs
+  let entry = { //fill with the table inputs
     contactname: array[index].contactname,
     contactIdNum:  array[index].contactIdNum,
     contactIdNum1: array[index].contactIdNum1,
     contactOption: array[index].contactOption,
   };
 
-  let  storeIndex=window.location.href;
-  let num=storeIndex.charAt(storeIndex.toString().length-1);
-  let allExistingStores=JSON.parse(localStorage.getItem('AllStores'));//array of contacts 
-
-  allExistingStores[num].contacts.push(JSON.parse(localStorage.getItem('entry')));
-
-  localStorage.setItem("AllStores", JSON.stringify(allExistingStores));
   
 
-  
+  //elemnt.push( JSON.parse(localStorage.getItem('entry')));
   
   }
   if(tableName==="table1"){
@@ -384,13 +386,13 @@ for (let index = 0; index < array.length; index++) {
     cell2.innerHTML = array[index].city;
     cell3.innerHTML = array[index].distric;
     cell4.innerHTML = array[index].storeOption;
-    let newStore = {
+    let entry = {
       Storename: array[index].Storename,
       city: array[index].city,
       distric: array[index].city,
       storeOption: array[index].storeOption,
     };
-    array.push(entry);
+   
   }
 
   row++;//incremt number of rows
@@ -402,8 +404,11 @@ for (let index = 0; index < array.length; index++) {
 
 
 function deleteStore() {
-
- 
+  let  storeIndex=window.location.href;
+  let index=storeIndex.charAt(storeIndex.toString().length-1);
+  AllStores.splice(index, 1);
+  localStorage.setItem('AllStores',JSON.stringify(AllStores));
+  window.location.href = "../html/index.html";
 }
 
 
