@@ -8,6 +8,9 @@
     <title>survey</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo" />
     <style>
+        *{
+            font-family: Cairo;
+        }
         body {
             background-color: gainsboro;
             font-family: Cairo;
@@ -16,6 +19,7 @@
             align-items: center;
 
         }
+
 
         .centerdiv {
             background-color: white;
@@ -26,6 +30,9 @@
             justify-content: center;
             align-items: center;
 
+        }
+        form{
+            margin-bottom: 20px;
         }
 
         .question1,.question2 ,.question3 ,.question4 ,.question5 {
@@ -97,7 +104,7 @@
             left: 34px;
             bottom: 34px;
             border-radius: 100%;
-
+           
             transition: all 0.09s ease;
         }
 
@@ -186,7 +193,30 @@
             background-color: #ddd;
             margin: 30px auto;
         }
+        .morecomments{
+            margin: 20px auto;
+direction: rtl;
+display: flex;
+flex-direction: column;
 
+        }
+        .morecomments textarea{
+            margin: 5px;
+            height: 100px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            
+        }
+
+        button{
+            background: #0d8a86;
+            color: #fff;
+            height: 30px;
+            width: 120px;
+            border-radius: 5px;
+            margin-bottom:10px; 
+            border: none;
+        }
     </style>
 </head>
 
@@ -233,7 +263,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="question2">
-                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <h3>ما مدى رضاك عن سهوله تقديم طلب الخدمه؟</h3>
                     <div class="radiogoup">
 
                         <div class="radioement">
@@ -270,7 +300,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="question3">
-                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <h3>ما مدى رضاك عن تكلفه الخدمه؟</h3>
                     <div class="radiogoup">
 
                         <div class="radioement">
@@ -307,7 +337,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="question4">
-                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <h3>ما مدى رضاك عن سرعه انجاز الطلب؟</h3>
                     <div class="radiogoup">
 
                         <div class="radioement">
@@ -344,7 +374,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="question5">
-                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <h3>في حال سبق ان صدرت شكوى, ما مدى رضاك عن الاستجابه للشكاوي؟</h3>
                     <div class="radiogoup">
 
                         <div class="radioement">
@@ -379,7 +409,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="divider"></div>
+                <div class="morecomments" >
+                    <label for="inputfeild">تفاصيل الشكوى</label>
+                    <textarea name="" id="inputfeild" placeholder="رقم الشكوى و الايميل المرسل اليه"></textarea>
+                </div>
+                <button type="submit">ارسال الاستبيان</button>
             </form>
         </div>
     </div>
