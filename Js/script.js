@@ -246,7 +246,7 @@ function myFunction() {//is used in fourm's submit  button
 
 }
 
-function myFunction1() {//is used in fourm's submit  button 
+function myFunction1() {//
 
   let  storeIndex=window.location.href;
   let index=storeIndex.charAt(storeIndex.toString().length-1);

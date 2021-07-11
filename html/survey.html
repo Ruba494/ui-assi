@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo" />
+    <style>
+        body {
+            background-color: gainsboro;
+            font-family: Cairo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .centerdiv {
+            background-color: white;
+            border-radius: 5px;
+            width: 60%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .question1,.question2 ,.question3 ,.question4 ,.question5 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .radiogoup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .radiogoup .radioement {
+            margin: auto 10px;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .radioement label {
+            font-size: 0.75rem;
+            margin-top: 10px;
+        }
+
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+
+        [type="radio"]:checked+label,
+        [type="radio"]:not(:checked)+label {
+            position: relative;
+            padding-top: 20px;
+            padding-left: 30px;
+            cursor: pointer;
+            line-height: 20px;
+            display: block;
+            color: #666;
+        }
+
+        [type="radio"]:checked+label:before,
+        [type="radio"]:not(:checked)+label:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+
+        [type="radio"]:checked+label:after,
+        [type="radio"]:not(:checked)+label:after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            /* background: #F87DA9; */
+            position: absolute;
+            left: 34px;
+            bottom: 34px;
+            border-radius: 100%;
+
+            transition: all 0.09s ease;
+        }
+
+        #one:checked+label:after,
+        #one+label:after ,
+        #one2:checked+label:after,
+        #one2+label:after ,
+        #one3:checked+label:after,
+        #one3+label:after , 
+        #one4:checked+label:after,
+        #one4+label:after ,
+        #one5:checked+label:after,
+        #one5+label:after 
+        {
+            background: #58AD5C;
+
+        }
+
+        #two:checked+label:after,
+        #two+label:after ,
+        #two2:checked+label:after,
+        #two2+label:after ,
+        #two3:checked+label:after,
+        #two3+label:after , 
+        #two4:checked+label:after,
+        #two4+label:after ,
+        #two5:checked+label:after,
+        #two5+label:after {
+            background: #75EC7D;
+        }
+
+       
+        #three:checked+label:after,
+        #three+label:after ,
+        #three2:checked+label:after,
+        #three2+label:after ,
+        #three3:checked+label:after,
+        #three3+label:after , 
+        #three4:checked+label:after,
+        #three4+label:after ,
+        #three5:checked+label:after,
+        #three5+label:after  {
+            background: #FFEA7D;
+        }
+
+       
+        #four:checked+label:after,
+        #four+label:after ,
+        #four2:checked+label:after,
+        #four2+label:after ,
+        #four3:checked+label:after,
+        #four3+label:after , 
+        #four4:checked+label:after,
+        #four4+label:after ,
+        #four5:checked+label:after,
+        #four5+label:after 
+         {
+            background: #FFB667;
+        }
+
+      
+        #five:checked+label:after,
+        #five+label:after ,
+        #five2:checked+label:after,
+        #five2+label:after ,
+        #five3:checked+label:after,
+        #five3+label:after , 
+        #five4:checked+label:after,
+        #five4+label:after ,
+        #five5:checked+label:after,
+        #ffive5+label:after {
+            background: #FF4235;
+        }
+
+
+        [type="radio"]:not(:checked)+label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+
+        .divider{
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="centerdiv">
+        <div class="formdiv">
+            <form action="">
+
+                <div class="question1">
+                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <div class="radiogoup">
+
+                        <div class="radioement">
+
+                            <input type="radio" id="one" class="one" name="ques1">
+                            <label for="one">راض جدا</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="two" name="ques1">
+                            <label for="two">راض</label>
+                        </div>
+
+
+                        <div class="radioement">
+
+                            <input type="radio" id="three" name="ques1">
+                            <label for="three">مقبول</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="four" name="ques1">
+                            <label for="four">غير راضي</label>
+
+                        </div>
+                        <div class="radioement">
+
+                            <input type="radio" id="five" name="ques1">
+                            <label for="five">غير راضي جدا</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="question2">
+                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <div class="radiogoup">
+
+                        <div class="radioement">
+
+                            <input type="radio" id="one2" name="ques2">
+                            <label for="one2">راض جدا</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="two2" name="ques2">
+                            <label for="two2">راض</label>
+                        </div>
+
+
+                        <div class="radioement">
+
+                            <input type="radio" id="three2" name="ques2">
+                            <label for="three2">مقبول</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="four2" name="ques2">
+                            <label for="four2">غير راضي</label>
+
+                        </div>
+                        <div class="radioement">
+
+                            <input type="radio" id="five2" name="ques2">
+                            <label for="five2">غير راضي جدا</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="question3">
+                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <div class="radiogoup">
+
+                        <div class="radioement">
+
+                            <input type="radio" id="one3" name="ques3">
+                            <label for="one3">راض جدا</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="two3" name="ques3">
+                            <label for="two3">راض</label>
+                        </div>
+
+
+                        <div class="radioement">
+
+                            <input type="radio" id="three3" name="ques3">
+                            <label for="three3">مقبول</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="four3" name="ques3">
+                            <label for="four3">غير راضي</label>
+
+                        </div>
+                        <div class="radioement">
+
+                            <input type="radio" id="five3" name="ques3">
+                            <label for="five3">غير راضي جدا</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="question4">
+                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <div class="radiogoup">
+
+                        <div class="radioement">
+
+                            <input type="radio" id="one4" name="ques4">
+                            <label for="one4">راض جدا</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="two4" name="ques4">
+                            <label for="two4">راض</label>
+                        </div>
+
+
+                        <div class="radioement">
+
+                            <input type="radio" id="three4" name="ques4">
+                            <label for="three4">مقبول</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="four4" name="ques4">
+                            <label for="four4">غير راضي</label>
+
+                        </div>
+                        <div class="radioement">
+
+                            <input type="radio" id="five4" name="ques4">
+                            <label for="five4">غير راضي جدا</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="question5">
+                    <h3>ما مدى رضاك عن وضوح متطلبات تقديم الخدمه؟</h3>
+                    <div class="radiogoup">
+
+                        <div class="radioement">
+
+                            <input type="radio" id="one5" name="ques5">
+                            <label for="one5">راض جدا</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="two5" name="ques5">
+                            <label for="two5">راض</label>
+                        </div>
+
+
+                        <div class="radioement">
+
+                            <input type="radio" id="three5" name="ques5">
+                            <label for="three5">مقبول</label>
+                        </div>
+
+                        <div class="radioement">
+
+                            <input type="radio" id="four5" name="ques5">
+                            <label for="four5">غير راضي</label>
+
+                        </div>
+                        <div class="radioement">
+
+                            <input type="radio" id="five5" name="ques5">
+                            <label for="five5">غير راضي جدا</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
